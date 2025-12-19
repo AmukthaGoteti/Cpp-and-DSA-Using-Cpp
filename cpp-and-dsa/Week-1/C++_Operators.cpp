@@ -92,5 +92,31 @@ int main() {
     cout << "d || e: " << (d || e) << endl;
     // Logical NOT
     cout << "!d: " << (!d) << endl;
-    return 0;
+
+    // Bitwise Operators
+    // Bitwise Operators are works on bit-level
+    /*
+        Bitwise AND, &, Performs bitwise AND operation
+        Bitwise OR, |, Performs bitwise OR operation
+        Bitwise XOR, ^, Performs bitwise XOR operation
+        Bitwise NOT, ~, Performs bitwise NOT operation
+        Left Shift, <<, Shifts bits to the left
+        Right Shift, >>, Shifts bits to the right
+    */
+   // Note: Only char and int data types can be used with bitwise operators.
+   int f = 6, g = 4;
+   // Bitwise AND operator
+   cout << "f & g: " << (f & g) << endl;
+    // Bitwise OR operator
+   cout << "f | g: " << (f | g) << endl;
+    // Bitwise XOR operator
+   cout << "f ^ g: " << (f ^ g) << endl;
+    // Bitwise NOT operator
+   cout << "~f: " << (~f) << endl;
+    // Left Shift operator
+   cout << "f << 1: " << (f << 1) << endl;
+    // Right Shift operator
+   cout << "f >> 1: " << (f >> 1) << endl;
+
+   return 0;
 }
