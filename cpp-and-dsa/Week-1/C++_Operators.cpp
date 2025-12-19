@@ -48,5 +48,49 @@ int main() {
         In a++, the value of the variable is assigned first and then it is incremented. 
         Similarly happens for the decrement operator.
     */
+
+    // Relational Operators
+    // Realational Operators are used for the comparsion of the values of two operands.
+    /*
+        Is Equal To, ==, Checks if both operands are equal
+        Greater Than, >, Checks if the left operand is greater than the right
+        Greater Than or Equal To, >=, Checks if the left operand is greater than or equal to the right
+        Less Than, <, Checks if the left operand is less than the right
+        Less Than or Equal To, <=, Checks if the left operand is less than or equal to the right
+        Not Equal To, !=, Checks if both operands are not equal
+    */
+
+    int x = 6, y = 4;
+    // Equal Operator
+    cout << "x == y : " << (x == y) << endl;
+    // Greater Than
+    cout << "x > y : " << (x > y) << endl;
+    // Greater Than or Equal To
+    cout << "x >= y : " << (x >= y) << endl;
+    // Less Than
+    cout << "x < y : " << (x < y) << endl;
+    // Less Than or Equal To
+    cout << "x <= y : " << (x <= y) << endl;
+    // Not Equal To
+    cout << "x != y : " << (x != y) << endl;
+
+    // 0 denotes false and 1 denotes true
+
+    // Logical Operators
+    // Logical Operators are 
+    // used to compare two or more conditions or contraints or to complement the evalution 
+    // of the original condition in consideration.
+    /*
+        Logical AND, &&, Returns true if both operands are true
+        Logical OR, ||, Returns true if at least one of the operands is true
+        Logical NOT, !, Reverses the logical state of its operand
+    */
+    int d = 6, e = 4;
+    // Logical AND
+    cout << "d && e: " << (d && e) << endl;
+    // Logical OR
+    cout << "d || e: " << (d || e) << endl;
+    // Logical NOT
+    cout << "!d: " << (!d) << endl;
     return 0;
 }
