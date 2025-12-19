@@ -23,5 +23,11 @@ int main() {
     if (n < 10 && n % 2 == 0) {
         cout << n << " is less than 10 and is an even number." << endl;
     }
+
+    // Check if the integer lies in the range
+    if (n <= 10 && n >= 0) {
+        cout << n << " is in range" << endl;
+    }
+    
     return 0;
 }
