@@ -19,5 +19,26 @@ int main() {
         cout << n << " is not divisible by 2" << endl;
     }
 
+    // Find the greatest among three numbers
+    int a = 10, b = 2, c = 6;
+    // outermost if else
+    if (a < b) {
+        // Nested if else
+        if (c < b) {
+            cout << b << endl;
+        }
+        else {
+            cout << c << endl;
+        }
+    }
+    else {
+        if (c < a) {
+            cout << a << endl;
+        }
+        else {
+            cout << c << endl;
+        }
+    }
+
     return 0;
 }
