@@ -53,5 +53,10 @@ int main() {
         cout << it << " ";
     }
     cout << endl;
+    // 5. Infinite loop
+    // An infinte loop is a piece of coding that lacks a functional exit so that it repeats indefinitely.
+    /*for(;;) {
+        cout << "This Loop will run forever." << endl;
+    }*/
     return 0;
 }
