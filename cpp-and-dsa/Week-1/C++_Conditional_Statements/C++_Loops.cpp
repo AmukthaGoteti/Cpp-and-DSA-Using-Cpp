@@ -66,5 +66,21 @@ int main() {
             cout << "i = " << i << ", j = " << j << endl;
         }
    }
-    return 0;
+   // Loop Control Statements
+   // Loop control statements change the normal flow of loops.
+   // 1. Break Statement
+   for (int k = 0; k < 5; k++) {
+        if (k == 2) {
+            break; // This line will never be executed
+        }
+        cout << "hi!" << endl;
+   }
+   // 2. Continue Statement
+   for (int k = 0; k < 5; k++) {
+        if (k == 2) {
+            continue; // Skip the rest of the loop when k is 2
+        }
+        cout << "Hello!" << endl;
+   }
+   return 0;
 }
