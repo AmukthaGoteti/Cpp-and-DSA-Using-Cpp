@@ -61,5 +61,22 @@ int main() {
     cout << arr6[3] << endl; // Output: 12
     // Accessing 1st element
     cout << arr6[0] << endl; // Output: 2
-    return 0;
+    // To change the element at a particular index in an array, 
+    // just use the = assignment operator with new values as 
+    // right hand expression while accessing the array element.
+    int arr7[] = {2, 4, 8, 12, 16};
+    int n = sizeof(arr7) / sizeof(arr7[0]);
+    // Print original array
+    for (int i = 0; i < n; i++) {
+        cout << arr7[i] << " ";
+    }
+    cout << endl;
+    // Update the first element
+    arr7[0] = 90;
+    cout << arr7[0] << endl;  // Output: 90
+    // Print updated array
+    for (int i = 0; i < n; i++) {
+        cout << arr7[i] << " ";
+    }
+    cout << endl;
 }
