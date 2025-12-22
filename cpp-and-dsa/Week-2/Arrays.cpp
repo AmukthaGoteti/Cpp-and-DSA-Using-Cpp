@@ -174,4 +174,15 @@ int main() {
         cout << endl;
     }
     return 0;
+
+    /*
+        Properties of Arrays
+            An array is a collection of data of the same data type, stored at a contiguous memory location.
+            Indexing of an array starts from 0. It means the first element is stored at the 0th index, the second at 1st, and so on.
+            Elements of an array can be accessed using their indices.
+            Once an array is declared its size remains constant throughout the program.
+            An array can have multiple dimensions.
+            The size of the array in bytes can be determined by the sizeof operator using which we can also find the number of elements in the array.
+            We can find the size of the type of elements stored in an array by subtracting adjacent addresses.
+    */
 }
