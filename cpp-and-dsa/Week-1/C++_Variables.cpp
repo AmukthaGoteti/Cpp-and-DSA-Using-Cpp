@@ -1,6 +1,6 @@
 /* 
     In C++, variable is a name given to a memory location
-    It is the basic uinit of storage in a program.
+    It is the basic unit of storage in a program.
     The value stored in a variable can be accessed or changed during program execution.
 */
 
