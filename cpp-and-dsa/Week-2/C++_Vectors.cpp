@@ -1,6 +1,7 @@
 // A vector represents a dynamic sized array in the Standard Template Library(STL) that automatically grows when elements are added beyond current capacity.
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 int main() {
     vector<int> v; // Declaration of vector
@@ -51,8 +52,28 @@ int main() {
     cout << "Original value at index 1: " << v5[1] << endl;
     v5[1] = 50; // Update element at index 1
     cout << "Updated value at index 1: " << v5[1] << endl;
-
+    // We can find the size(number of elements) of a vector using the size() function, like v.size().
     vector<char> v6 = {'a', 'c', 'f', 'd', 'z'};
     cout << v6.size() << endl; // Size of vector
+
+    /*
+        Traversing a vector means going through each element one by one, usually using a loop.
+        You can use a for loop with an index (v[i]), a range-based for loop (for(int x: v)), or iterators.
+        It takes linear time O(n).
+    */
+    vector<char> v7 = {'a', 'c', 'f', 'd', 'z'};
+    for (int i = 0; i < v7.size(); i++) {
+        cout << v7[i] << " ";
+    }
+    cout << endl;
+
+    // You can remove elements from a vector using `erase()`, but it is slow because all the elements after it must be shifted, so it takes O(n) time; to quickly remove the last element, use `pop_back()`, which is fast and takes O(1) time.
+    vector<char> v8 = {'a', 'c', 'f', 'd', 'z'};
+    v8.pop_back();
+    v8.erase(find(v8.begin(), v8.end(), 'f'));
+    for (int i = 0; i < v8.size(); i++) {
+        cout << v8[i] << " ";
+    }
+    cout << endl;
     return 0;
 }
