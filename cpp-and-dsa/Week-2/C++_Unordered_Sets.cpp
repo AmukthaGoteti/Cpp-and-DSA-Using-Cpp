@@ -20,8 +20,23 @@ int main() {
     unordered_set<int> us1;
     // Initialize an unordered_set
     unordered_set<int> us2 = {1, 2, 3, 4, 5};
-    for (auto x : us2)
+    for (auto x : us2) {
         cout << x << " ";
+    }
+    cout << endl;
+
+    // Basic Operation
+    // Insertion Elements
+    /*
+        New elements can be inserted into unordered set using insert() method. We cannot specify the position to insert the element as it is automatically decided by its hashed value.
+    */
+    unordered_set<int> us3;
+    us3.insert(3);
+    us3.insert(2);
+    us3.insert(1);
+    for(auto x: us3) {
+        cout << x << " ";
+    }
     cout << endl;
     return 0;
 }
