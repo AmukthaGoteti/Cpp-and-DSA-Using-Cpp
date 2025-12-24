@@ -57,10 +57,20 @@ int main() {
     unordered_set<int> us5 = {1, 2, 3, 4, 5};
     auto it1 = us5.find(4);
     if(it1 != us5.end()) {
-        cout << *it;
+        cout << *it1;
     }
     else {
         cout << "Element not Found";
+    }
+    cout << endl;
+
+    // Traversing Elements
+    /*
+        Unordered set can be traverse either range-based for loop or using begin() and end() iterator in a loop.
+    */
+    unordered_set<int> us6 = {1, 2, 3, 4, 5};
+    for (auto it2 = us6.begin(); it2 != us6.end(); it2++) {
+        cout << *it2 << " ";
     }
     cout << endl;
     return 0;
