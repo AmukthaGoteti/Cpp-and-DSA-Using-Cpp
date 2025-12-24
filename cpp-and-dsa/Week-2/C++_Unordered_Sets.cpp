@@ -73,5 +73,22 @@ int main() {
         cout << *it2 << " ";
     }
     cout << endl;
+
+    // Dleeting Elements
+    /*
+        Elements can be removed from the unoreded set using erase() method.
+        We can erase elements either by value or by position.
+    */
+    unordered_set<int> us7 = {1, 2, 3, 4, 5};
+    us7.erase(5);
+    for (auto x : us7) {
+        cout << x << " ";
+    }
+    cout << endl;
+    us7.erase(us7.begin());
+    for (auto x : us7) {
+        cout << x << " ";
+    }
+    cout << endl;
     return 0;
 }
