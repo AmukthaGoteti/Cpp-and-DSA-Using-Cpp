@@ -87,5 +87,16 @@ int main() {
         cout << it->first << ": " << it->second << endl;
     }
     else cout << "Not Found";
+    // Traversing
+    /*
+        Traversing an unordered map involves iterating through 
+        all the key-value pairs stored in the container.
+        This can be done by incrementing begin() iterator till 
+        it is not equal to end() iterator.
+    */
+    unordered_map<int, string> um6 = {{1, "Geeks"}, {2, "For"}, {3, "C++"}};
+    for(auto it = um6.begin(); it != um6.end(); it++) {
+        cout << it -> first << ": " << it -> second << endl;
+    }
     return 0;
 }
