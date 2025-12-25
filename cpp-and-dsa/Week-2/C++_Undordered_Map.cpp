@@ -48,5 +48,16 @@ int main() {
     for(auto i : um2) {
         cout << i.first << " " << i.second << endl;
     }
+    // Acessing Elements
+    /*
+        Elements in unordered map can be accessed using 
+        the [] operator or at() function. 
+        But if the key is not found, 
+        [] operator insert default value for key then return that 
+        default value. So, it is better to use at() method.
+    */
+    unordered_map<int, string> um3 = {{1, "Geeks"}, {2, "For"}, {3, "C++"}};
+    cout << um3[2] << endl;
+    cout << um3.at(1) << endl;
     return 0;
 }
