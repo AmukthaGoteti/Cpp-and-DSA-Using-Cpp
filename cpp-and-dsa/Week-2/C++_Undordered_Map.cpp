@@ -74,5 +74,18 @@ int main() {
     for (auto j : um4) {
         cout << j.first << " " << j.second << endl;
     }
+    // Finding Elements
+    /*
+        Unordered map provides fast element 
+        search by key using the find() member function. 
+        This function returns iterator the element if found, 
+        otherwise returns end() iterator.
+    */
+    unordered_map<int, string>  um5 = {{1, "Geeks"}, {2, "For"}, {3, "C++"}};
+    auto it = um5.find(2);
+    if(it != um5.end()) {
+        cout << it->first << ": " << it->second << endl;
+    }
+    else cout << "Not Found";
     return 0;
 }
