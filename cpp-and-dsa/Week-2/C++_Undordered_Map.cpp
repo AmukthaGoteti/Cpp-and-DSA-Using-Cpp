@@ -23,6 +23,30 @@ int main() {
     // Unordered map is defined as 
     // the std::unordered_map class template inside 
     // the <unordered_map> header file.
-    // unordered_map<key_type, value_type> um;
+    // Syntax -> unordered_map<key_type, value_type> um;
+
+    // Declararion and Initialization
+    unordered_map<int, string> um1 = {{1, "Geeks"}, {2, "For"}, {3, "C++"}};
+    for (auto x : um1) {
+        cout << x.first << " " << x.second << endl;
+    }
+
+    // Basic Operations
+    // Inserting Elements
+    /*
+        A new key-value pairs can be inserted in unordered map using either 
+        [] operator 
+        or insert() method. 
+        If the element with the given key already exists, 
+        the insert() method skip the insertion but [] operator 
+        updates the associated value to the new value.
+    */
+    unordered_map<int, string> um2;
+    um2[1] = "Geeks";
+    um2.insert({2, "For"});
+    um2.insert({3, "C++"});
+    for(auto i : um2) {
+        cout << i.first << " " << i.second << endl;
+    }
     return 0;
 }
