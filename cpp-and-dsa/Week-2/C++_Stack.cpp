@@ -51,5 +51,17 @@ int main() {
         st.pop();
     }
     cout << endl;
+    // empty()
+    /*
+        This checks whether the stack is empty.
+        It returns true if the stack has no elements; otherwise, it returns false.
+    */
+    if(st.empty()) {
+        cout << "Stack is empty" << endl;
+    }
+    st.push(100);
+    if(!st.empty()) {
+        cout << "Stack is not empty. Top eleemnt: " << st.top() << endl;
+    }
     return 0;
 }
