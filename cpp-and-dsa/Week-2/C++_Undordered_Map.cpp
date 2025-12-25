@@ -105,5 +105,17 @@ int main() {
         the order in which elements are traversed 
         may not match the order in which they were inserted.
     */
+    // Deleting Elements
+    /*
+        Elements in an unordered map can be deleted using 
+        the erase() function by passing 
+        a specific key or the iterator to the element.
+    */
+    unordered_map<int, string> um7 = {{1, "Geeks"}, {2, "For"}, {3, "C++"}};
+    um7.erase(2);
+    um7.erase(um7.begin());
+    for(auto it = um7.begin(); it != um7.end(); it++) {
+        cout << it -> first << ": " << it -> second << endl;
+    }
     return 0;
 }
