@@ -98,5 +98,12 @@ int main() {
     for(auto it = um6.begin(); it != um6.end(); it++) {
         cout << it -> first << ": " << it -> second << endl;
     }
+
+    /*
+        Range based for loop can also be used for simple traversal.
+        Since unordered map does not maintain a specific order of elements,
+        the order in which elements are traversed 
+        may not match the order in which they were inserted.
+    */
     return 0;
 }
