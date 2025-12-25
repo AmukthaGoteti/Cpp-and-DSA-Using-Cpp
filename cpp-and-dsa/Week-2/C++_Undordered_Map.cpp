@@ -16,5 +16,7 @@ int main() {
     for(auto i : um) {
         cout << i.first <<": " << i.second << endl;
     }
+    // Unordered map is defined as the std::unordered_map class template inside the <unordered_map> header file.
+    // unordered_map<key_type, value_type> um;
     return 0;
 }
