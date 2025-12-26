@@ -93,5 +93,14 @@ int main() {
         temp.pop();
     }
     cout << endl;
+    /*
+        The below table lists the time complexity of the above operations on stack:
+
+        Operation	                Time Complexity
+        Insert an element (push)	O(1)
+        Delete an element (pop)	    O(1)
+        Access top element (peek)	O(1)
+        Traverse the stack	        O(n)
+    */
     return 0;
 }
