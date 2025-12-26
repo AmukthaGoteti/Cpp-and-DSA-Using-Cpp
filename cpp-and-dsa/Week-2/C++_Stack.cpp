@@ -75,5 +75,21 @@ int main() {
     cout << "Size of stack: " << st.size() << endl;
     st.pop();
     cout << "Size of stack: " << st.size() << endl;
+
+    // Pseudo Traversal
+    /*
+        A stack lets you see only the top element, so you cannot directly traverse it.
+        To traverse it safely, make a copy of the stack and 
+        repeatedly read and 
+        remove the top element from the copy until 
+        it becomes empty, while the original stack remains unchanged.
+    */
+    st.push(10);
+    st.push(20);
+    st.push(30);
+    stack<int> temp(st);
+    while(!temp.empty()) {
+        cout << temp.top() << " ";
+    }
     return 0;
 }
