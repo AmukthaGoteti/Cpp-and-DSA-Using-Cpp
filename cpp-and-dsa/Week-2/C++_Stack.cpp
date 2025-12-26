@@ -92,5 +92,6 @@ int main() {
         cout << temp.top() << " ";
         temp.pop();
     }
+    cout << endl;
     return 0;
 }
