@@ -90,6 +90,7 @@ int main() {
     stack<int> temp(st);
     while(!temp.empty()) {
         cout << temp.top() << " ";
+        temp.pop();
     }
     return 0;
 }
