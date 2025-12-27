@@ -33,7 +33,8 @@ int main() {
 
     // Declaration and Intialization
     // Declaration of a priority queue means creating it using the STL choosing whether it's a max-heap or min-heap.
-    // Max-Heap (default Behaviour):
-    
+    // Max-Heap (default Behaviour): priority_queue<int>pq;
+    // Min-Heap: priority_queue<int,vector<int>,greater<int>>pq;
+
     return 0;
 }
