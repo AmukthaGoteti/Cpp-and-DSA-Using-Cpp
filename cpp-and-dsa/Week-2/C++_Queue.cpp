@@ -35,7 +35,7 @@ int main() {
     q.push(3);
     q.push(4);
     q.push(5);
-    // Accession Elements
+    // Accessing Elements
     /*
         Only the front and back elements of the 
         queue can be accessed by using front() and back()
@@ -47,6 +47,32 @@ int main() {
     q.push(5);
     cout << q.front() << endl;
     cout << q.back() << endl;
-    
+    // Deleting Elements
+    /*
+        Elements can only be deleted from the 
+        front of the queue using the pop() function.
+        The process of deleting elements from a queue 
+        is also called dequeue.
+        Time complexity for deletion : O(1)
+    */
+    queue<int> q1;
+    q1.push(3);
+    q1.push(4);
+    q1.push(5);
+    cout << "Queue Before Deleting" << endl;
+    queue<int> temp = q1;   // copy for safe traversal
+    while (!temp.empty()) {
+        cout << temp.front() << " ";
+        temp.pop();
+    }
+    cout << endl;
+    // delete one element
+    q1.pop();
+    cout << "Queue After Deleting" << endl;
+    while (!q1.empty()) {
+        cout << q1.front() << " ";
+        q1.pop();
+    }
+    cout << endl;
     return 0;
 }
