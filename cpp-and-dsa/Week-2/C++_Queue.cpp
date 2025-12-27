@@ -109,5 +109,19 @@ int main() {
         temp1.pop();
     }
     cout << endl;
+    // All member functions
+    // Following is the list of all member functions of std::queue class in C++
+    /*
+        Functions                       Description
+        front()                         Access the front element of the queue.
+        back()                          Access the end element of the queue.
+        empty()                         Check whether a queue is empty or not.
+        size()                          Returns the number of elements in the queue.
+        push()                          Adding an element at the back of the queue.
+        push_range()                    Adding multiple elements at the end of queue.
+        emplace()                       Add the constructs element in top of the queue.
+        pop()                           Delete the front element of the queue.
+        swap()                          Swap two queues.
+    */
     return 0;
 }
