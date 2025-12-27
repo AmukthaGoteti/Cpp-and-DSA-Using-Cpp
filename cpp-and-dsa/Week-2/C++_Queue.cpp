@@ -125,3 +125,26 @@ int main() {
     */
     return 0;
 }
+/*
+    Difference Between Stack and Queue
+    | Aspect             | Stack                                | Queue                                  |
+    | ------------------ | ------------------------------------ | -------------------------------------- |
+    | Principle          | LIFO – Last In, First Out            | FIFO – First In, First Out             |
+    | Insertion          | `push()` (at the top)                | `enqueue()` / `push()` (at the rear)   |
+    | Deletion           | `pop()` (from the top)               | `dequeue()` / `pop()` (from the front) |
+    | Accessible Element | Only the **top** element             | Only the **front** element             |
+    | Order of Removal   | Reverse of insertion                 | Same as insertion                      |
+    | Real-world Example | Stack of plates                      | Line at a ticket counter               |
+    | Common Uses        | Function calls, undo/redo, recursion | Scheduling, buffering, BFS             |
+
+    In simple words
+
+    * Stack: You remove the last added element first.
+    * Queue: You remove the first added element first.
+
+    One-line memory trick
+
+    > Stack = LIFO, Queue = FIFO
+
+    This distinction is fundamental and appears frequently in interviews and problem-solving—mastering it will serve you well.
+*/
