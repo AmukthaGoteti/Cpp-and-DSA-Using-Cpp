@@ -46,5 +46,6 @@ int main() {
     pq1.push(9);
     pq1.push(8);
     pq1.push(6);
+    
     return 0;
 }
