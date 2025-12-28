@@ -40,5 +40,11 @@ int main() {
     pq.push(5);
     pq.push(20);
 
+    // Basic Operations
+    // Insertion Elements
+    priority_queue<int> pq1;
+    pq1.push(9);
+    pq1.push(8);
+    pq1.push(6);
     return 0;
 }
