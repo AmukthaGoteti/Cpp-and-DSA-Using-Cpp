@@ -56,7 +56,7 @@ int main() {
     // The vector insert() function can also insert elements from an initializer list at given index.
     // Syntax -> v.insert(pos, {val1, val2, ...});
     /*
-        pos- Iterator to the position where range is to be inserted.
+        pos - Iterator to the position where range is to be inserted.
         {val1, val2, ...} - Initializer list containing values to insert.
     */
     vector<int> v3 = {1, 2, 3, };
