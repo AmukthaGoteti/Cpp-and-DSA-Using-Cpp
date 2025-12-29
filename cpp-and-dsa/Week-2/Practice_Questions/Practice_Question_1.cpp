@@ -7,6 +7,7 @@
 */
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main() {
@@ -50,6 +51,19 @@ int main() {
     v2.insert(v2.begin() + 1, 3, 2);
     for(auto i: v2)
         cout << i << " ";
+    cout << endl;
+    // Insert List of Elements
+    // The vector insert() function can also insert elements from an initializer list at given index.
+    // Syntax -> v.insert(pos, {val1, val2, ...});
+    /*
+        pos- Iterator to the position where range is to be inserted.
+        {val1, val2, ...} - Initializer list containing values to insert.
+    */
+    vector<int> v3 = {1, 2, 3, };
+    v3.insert(v3.begin() + 3, {4, 5});
+    for(auto i : v3) {
+        cout << i << " ";
+    }
     cout << endl;
     return 0;
 }
