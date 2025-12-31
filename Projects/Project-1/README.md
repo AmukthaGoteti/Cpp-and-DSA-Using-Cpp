@@ -1,185 +1,116 @@
 # Intelligent Task Planning & Recommendation System (ITPRS)
 
-A cross-language productivity system that combines a **high-performance C++ scheduling engine** with a **modern, user-friendly Python GUI dashboard**.
-The system intelligently prioritizes tasks, recommends what to work on next, and dynamically updates task ordering using algorithms and data structures.
+An intelligent, adaptive task planner designed to optimize productivity by dynamically prioritizing tasks and generating efficient schedules based on deadlines, duration, and importance.
 
 ---
 
-## 🚀 Project Overview
+## 📌 Overview
 
-Traditional to-do lists are static and manual.
-**ITPRS** is designed to *think ahead*.
+Managing multiple tasks with competing deadlines, varying priorities, and limited time often leads to inefficient planning and frequent rework. Most traditional planners are static and require constant manual intervention.
 
-It automatically:
+**ITPRS** addresses this problem by acting as a smart scheduling engine that:
 
-* Prioritizes tasks based on **importance, urgency, and duration**
-* Recommends the **best task to focus on next**
-* Maintains an optimized task order using a **priority queue**
-* Updates instantly through a **desktop GUI dashboard**
+* Thinks ahead
+* Adapts in real time
+* Continuously optimizes task schedules as conditions change
 
-This project demonstrates **systems thinking**, **C++ performance**, and **Python UI integration**.
+The system is built with a **C++ core** for performance and algorithmic efficiency, complemented by a **Python GUI** and an **HTML/CSS dashboard** for visualization.
 
 ---
 
-## 🧠 Core Architecture
+## 🚀 Features
 
-```
-Python GUI (Tkinter + ttk)
-        │
-        ▼
-ctypes (C ABI bridge)
-        │
-        ▼
-C++ Task Planner Engine
-(priority_queue + scheduling logic)
-```
+* **Intelligent Task Prioritization**
 
-* **C++** → Core logic, algorithms, performance
-* **Python** → GUI, usability, rapid interaction
-* **ctypes** → Seamless cross-language integration
+  * Ranks tasks using deadlines, estimated duration, and importance
+* **Optimized Scheduling**
 
----
+  * Generates daily and weekly task plans automatically
+* **Dynamic Recalculation**
 
-## ✨ Key Features
+  * Re-optimizes schedules when tasks are added, updated, or delayed
+* **User-Friendly Interface**
 
-### C++ Backend
+  * GUI-based interaction for task input and visualization
+* **Scalable Architecture**
 
-* Priority-based task scheduling using `priority_queue`
-* Custom comparator for dynamic prioritization
-* Real-time task recommendation
-* Safe encapsulation of internal data structures
-* Exposed as a shared library (`.dylib / .so / .dll`)
-
-### Python GUI Dashboard
-
-* Clean, modern desktop interface
-* Guided task input with validation
-* Live task table (priority-sorted)
-* Immediate visual feedback on task addition
-* User-friendly design focused on clarity and focus
+  * Designed to handle increasing task complexity efficiently
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack
 
-| Layer       | Technology                                    |
-| ----------- | --------------------------------------------- |
-| Core Engine | C++ (STL, priority_queue, custom comparators) |
-| GUI         | Python (Tkinter, ttk)                         |
-| Integration | ctypes                                        |
-| Platform    | macOS / Linux / Windows                       |
-| Build       | g++ / clang++                                 |
+**Core Logic**
+
+* C++
+* Data Structures & Algorithms (Priority Queues, Sorting, Scheduling Heuristics)
+
+**Interface & Dashboard**
+
+* Python (Tkinter GUI)
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
-```
+```plaintext
 ITPRS/
-├── taskplanner.cpp        # C++ backend (shared library)
-├── libtaskplanner.dylib   # Compiled library (macOS)
-├── gui.py                 # Python GUI dashboard
-├── README.md              # Project documentation
+│
+├── ITPRS.cpp          # Core C++ scheduling and prioritization engine
+├── planner_gui.py     # Python-based GUI for task input and interaction
+├── tasks.txt          # taskstxt is added automatically when you run the code
+├── README.md
 ```
 
 ---
 
 ## ⚙️ How It Works
 
-### Task Priority Formula
+1. **Task Input**
 
-```text
-priority = (importance × 2)
-         + (10 / deadline)
-         − (duration × 0.5)
-```
+   * User provides task details: name, deadline, estimated duration, and importance
+2. **Priority Evaluation**
 
-* Higher importance → higher priority
-* Closer deadlines → higher urgency
-* Longer tasks → slightly deprioritized
+   * Tasks are ranked using a weighted priority strategy
+3. **Schedule Generation**
 
-The highest-priority task is always accessible in **O(1)** time.
+   * Optimized time slots are allocated for daily and weekly plans
+4. **Real-Time Adaptation**
+
+   * Any task modification triggers automatic re-planning
 
 ---
 
 ## ▶️ How to Run
 
-### 1️⃣ Compile the C++ Backend
-
-#### macOS
+### 1. Compile using the C++ Core
 
 ```bash
-g++ -std=c++17 -shared -fPIC taskplanner.cpp -o libtaskplanner.dylib
+g++ ITPRS.cpp -o itprs
+./itprs
 ```
+### (or)
 
-#### Linux
-
-```bash
-g++ -std=c++17 -shared -fPIC taskplanner.cpp -o libtaskplanner.so
-```
-
-#### Windows (MinGW)
+### 2. Launch the GUI
 
 ```bash
-g++ -shared taskplanner.cpp -o taskplanner.dll
+python3 planner_gui.py
 ```
 
 ---
 
-### 2️⃣ Run the GUI
+## 📈 Future Enhancements
 
-```bash
-python3 gui.py
-```
-
-The dashboard will launch as a desktop application.
-
----
-
-## 🖥️ GUI Capabilities
-
-* Add tasks with:
-
-  * Name
-  * Deadline
-  * Estimated duration
-  * Importance
-* See all tasks instantly in priority order
-* Focus panel highlights the **recommended task**
-* Inline validation and friendly feedback
-* Keyboard-friendly and distraction-free UI
+* Machine learning–based priority tuning
+* Calendar integration (Google / Outlook)
+* Notification and reminder system
+* Cloud-based task synchronization
+* Mobile-friendly dashboard
 
 ---
 
-## 🎯 Why This Project Is Strong
+## 👩‍💻 Author
 
-This project demonstrates:
-
-* ✅ Data Structures & Algorithms (priority queue, comparators)
-* ✅ C++ systems programming
-* ✅ Python GUI development
-* ✅ Cross-language integration
-* ✅ Real-world architecture
-* ✅ User-centered design thinking
-
----
-
-## 🧩 Possible Extensions
-
-* Task completion / deletion
-* Daily & weekly schedule timeline
-* File persistence (save/load tasks)
-* Dark mode
-* Migration to PyQt for premium UI
-* Packaging as `.app` / `.exe`
-
----
-
-If you want, I can:
-
-* Add screenshots to this README
-* Optimize wording for recruiters
-* Write a **GitHub project description**
-* Create a **resume bullet + interview answer**
-
-Just say the word.
+**Amuktha Goteti**
+Electronics & Communications Engineer
+Focused on building intelligent, efficient, and adaptive systems using strong algorithmic foundations.
