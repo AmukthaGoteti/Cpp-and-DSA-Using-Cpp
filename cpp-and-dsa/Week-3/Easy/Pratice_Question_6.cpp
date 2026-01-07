@@ -21,3 +21,43 @@
         Input: nums = [3,3], target = 6
         Output: [0,1]
 */
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+vector<int> twoSum(vector<int>& nums, int target) {
+    int n = nums.size();
+
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {   // start from i+1
+            if (nums[i] + nums[j] == target) {
+                return {i, j};             // return indices
+            }
+        }
+    }
+    return {}; // no solution found
+}
+
+int main() {
+    int n;
+    cin >> n;
+
+    int target;
+    cin >> target;
+
+    vector<int> nums(n);                   // allocate size
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i];
+    }
+
+    vector<int> ans = twoSum(nums, target);
+
+    if (!ans.empty()) {
+        cout << ans[0] << " " << ans[1] << endl;
+    } else {
+        cout << "No solution found" << endl;
+    }
+
+    return 0;
+}
