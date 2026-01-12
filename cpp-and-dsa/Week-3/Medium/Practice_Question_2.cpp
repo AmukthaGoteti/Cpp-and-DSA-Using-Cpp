@@ -39,8 +39,7 @@ int main() {
             for (int k = j + 1; k < n; k++) {
                 if (nums[i] + nums[j] + nums[k] == 0) {
                     cout << "[" << nums[i] << "," << nums[j] << "," << nums[k] << "]\n";
-                }
-                else {
+                } else {
                     cout << "[" << "]\n";
                 }
             }
