@@ -40,6 +40,9 @@ int main() {
                 if (nums[i] + nums[j] + nums[k] == 0) {
                     cout << "[" << nums[i] << "," << nums[j] << "," << nums[k] << "]\n";
                 }
+                else {
+                    cout << "[" << "]\n";
+                }
             }
         }
     }
