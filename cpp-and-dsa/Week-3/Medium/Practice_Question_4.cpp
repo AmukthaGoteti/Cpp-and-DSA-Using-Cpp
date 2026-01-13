@@ -28,7 +28,9 @@
 using namespace std;
 
 int main() {
-    // Option 1: Print Subarrays and Find Maximum Sum of the Subarrays
+    /* Option 1: Print Subarrays and 
+                 Find Maximum Sum of the Subarrays
+    */
     int n;
     cin >> n;
     vector<int> arr(n);
