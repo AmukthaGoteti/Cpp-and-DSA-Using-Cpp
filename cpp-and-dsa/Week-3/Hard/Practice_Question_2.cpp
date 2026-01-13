@@ -30,28 +30,31 @@ using namespace std;
 bool checkSubarraySum(vector<int>& nums, int k) {
     unordered_map<int,int> seen; 
     seen[0] = -1;   // handles subarrays starting at index 0
-
     int prefix = 0;
-    for (int i = 0; i < nums.size(); i++) {
+    for (int i = 0; i < nums.size(); i++) 
+    {
         prefix += nums[i];
         prefix %= k;
-
-        if (seen.find(prefix) != seen.end()) {
+        if (seen.find(prefix) != seen.end()) 
+        {
             if (i - seen[prefix] >= 2) return true;
-        } else {
+        } else 
+        {
             seen[prefix] = i;
         }
     }
     return false;
 }
 
-int main() {
+int main() 
+{
     int n, k;
     cin >> n >> k;
-
     vector<int> nums(n);
-    for (int i = 0; i < n; i++) cin >> nums[i];
-
+    for (int i = 0; i < n; i++) 
+    {
+        cin >> nums[i];
+    }
     cout << (checkSubarraySum(nums, k) ? "true" : "false") << endl;
     return 0;
 }
