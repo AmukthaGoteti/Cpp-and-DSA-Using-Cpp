@@ -55,7 +55,7 @@ int main() {
     cout << "Enter the target sum S: ";
     cin >> S;
     // ----- Brute Force (unchanged) -----
-    /* for (int i = 0; i < n - 1; i++) {
+    for (int i = 0; i < n - 1; i++) {
         for (int j = i + 1; j < n; j++) {
             if (arr[i] + arr[j] == S) {
                 cout << "True" << endl;
@@ -63,7 +63,7 @@ int main() {
             }
         }
     }
-    cout << "False" << endl;*/
+    cout << "False" << endl;
     // ----- Efficient Approach -----
     if (pairExists(arr.data(), n, S)) {
         cout << "True";
