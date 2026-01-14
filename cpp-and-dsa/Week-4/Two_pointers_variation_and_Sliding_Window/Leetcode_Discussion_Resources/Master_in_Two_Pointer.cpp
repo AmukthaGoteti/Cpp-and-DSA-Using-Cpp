@@ -31,6 +31,13 @@ bool pairExists(int arr[], int n, int S)
     return false;
 }
 
+
+struct Node {
+    int data;
+    Node* next;
+    Node(int x) : data(x), next(nullptr) {}
+};
+
 int main() {
     // One pointer at each end
     // One pointer starts from beginning and other from the end and they proceed towards each other
@@ -74,5 +81,34 @@ int main() {
         cout << "False";
     }
     cout << endl;
+
+    /*
+        Problem Statement:
+            Find the middle of a linked list
+    */
+    // Brute Force Approach
+    // Create linked list: 1 → 2 → 3 → 4 → 5
+    Node* head = new Node(1);
+    head->next = new Node(2);
+    head->next->next = new Node(3);
+    head->next->next->next = new Node(4);
+    head->next->next->next->next = new Node(5);
+    // --- Brute Force: Step 1 → Count nodes ---
+    int count = 0;
+    Node* temp = head;
+    while (temp != nullptr) {
+        count++;
+        temp = temp->next;
+    }
+    // --- Step 2 → Compute middle index ---
+    int mid = count / 2;
+    // --- Step 3 → Traverse again to middle ---
+    temp = head;
+    for (int i = 0; i < mid; i++) {
+        temp = temp->next;
+    }
+    // temp now points to the middle node
+    cout << "Middle element: " << temp->data << endl;
+
     return 0;
 }
