@@ -20,3 +20,21 @@
         Explanation: The elements can be paired up into pairs (3,5), (4,4), and (6,2).
         The maximum pair sum is max(3+5, 4+4, 6+2) = max(8, 8, 8) = 8.
 */
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    vector<int> nums = {3, 5, 2, 3};
+    sort(nums.begin(), nums.end());
+    int n = nums.size();
+    int maxPairSum = 0;
+    for (int i = 0; i < n / 2; i++) {
+        int pairSum = nums[i] + nums[n - 1 - i];
+        maxPairSum = max(maxPairSum, pairSum);
+    }
+    cout << "The minimized maximum pair sum is: " << maxPairSum << endl;
+    return 0;
+}
