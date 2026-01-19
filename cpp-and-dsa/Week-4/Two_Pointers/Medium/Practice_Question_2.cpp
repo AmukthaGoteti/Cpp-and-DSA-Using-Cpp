@@ -29,24 +29,20 @@ int main() {
     for (int i = 0; i < n; i++) {
         cin >> height[i];
     }
-
     int left = 0;
     int right = n - 1;
     int maxArea = 0;
-
     while (left < right) {
         int width = right - left;
         int currentHeight = min(height[left], height[right]);
         int currentArea = width * currentHeight;
         maxArea = max(maxArea, currentArea);
-
         if (height[left] < height[right]) {
             left++;
         } else {
             right--;
         }
     }
-
     cout << "The maximum amount of water the container can store is: " << maxArea << endl;
     return 0;
 }
