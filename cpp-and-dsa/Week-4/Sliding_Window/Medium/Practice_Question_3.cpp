@@ -32,11 +32,9 @@ int main() {
     }
     cout << "Enter the goal sum: ";
     cin >> goal;
-
     unordered_map<int, int> prefixSumCount;
     prefixSumCount[0] = 1; // There's one way to have a prefix sum of 0
     int currentSum = 0, result = 0;
-
     for (int i = 0; i < n; i++) {
         currentSum += nums[i];
         if (prefixSumCount.find(currentSum - goal) != prefixSumCount.end()) {
@@ -44,7 +42,6 @@ int main() {
         }
         prefixSumCount[currentSum]++;
     }
-
     cout << "Output: " << result << endl;
     return 0;
 }
