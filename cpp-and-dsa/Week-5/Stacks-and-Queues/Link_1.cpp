@@ -98,4 +98,22 @@ int main() {
     cout << st2.top() << " " << endl;
     st2.pop();
     cout << st2.top() << " " << endl;
+    // isEmpty Operation in Stack
+    /*
+        isEmpty operation is a boolean operation that is 
+        used to determine if the stack is empty or not. 
+        This will return true if the stack is empty, else false.
+    */
+    stack<int> st3;
+    if(st3.empty()) {
+        cout << "Stack is empty." << endl;
+    } else {
+        cout << "Stack is not empty." << endl;
+    }
+    st3.push(1);
+    if(st3.empty()) {
+        cout << "Stack is empty." << endl;
+    } else {
+        cout << "Stack is not empty." << endl;
+    }
 }
