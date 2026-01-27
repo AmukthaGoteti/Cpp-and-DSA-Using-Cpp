@@ -51,3 +51,24 @@
         isEmpty() returns true if stack is empty else false.
         size() returns the size of the stack.
 */
+
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main() {
+    // Push Operation in Stack
+    /*
+        Push operation is used to 
+        insert an element onto the top of the stack.
+    */
+    stack<int> st;
+    st.push(1);
+    st.push(2);
+    st.push(3);
+    while (!st.empty()) {
+        cout << st.top() << " "; // 3 2 1
+        st.pop();
+    }
+    cout << endl;
+}
