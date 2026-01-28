@@ -49,5 +49,13 @@ int main() {
     // Access the front element (Now BMW)
     cout << cars1.front() << " \n";
     cout << cars.size() << " \n"; // Size of the queue
+    queue<string> cars2;
+    cout << cars2.empty() << " \n"; // Check if the queue is empty (1 for true, 0 for false)
+    queue<string> cars3;
+    cars3.push("Volvo");
+    cars3.push("BMW");
+    cars3.push("Ford");
+    cars3.push("Mazda");
+    cout << cars3.empty() << " \n";  // Outputs 0 (not empty)
     return 0;
 }
