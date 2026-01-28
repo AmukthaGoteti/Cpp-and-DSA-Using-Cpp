@@ -25,4 +25,11 @@ int main() {
         cout << cars.front() << " \n";
         cars.pop();
     }
+    // Accessing Front and Back Elements
+    cars.push("Volvo");
+    cars.push("BMW");
+    cars.push("Ford");
+    cars.push("Mazda");
+    cout << cars.front() << " \n";
+    cout << cars.back() << " \n";
 }
