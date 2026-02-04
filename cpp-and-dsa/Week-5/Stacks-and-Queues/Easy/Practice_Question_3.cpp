@@ -31,3 +31,60 @@
         Explanation: The expression (a+b)*(c+d) is converted by first doing (a+b) -> ab+, 
                      then doing (c+d) -> cd+, and finally the expression ab+*cd+ becomes ab+cd+*. 
 */
+
+#include <iostream>
+#include <stack>
+#include <string>
+using namespace std;
+
+int precedence(char op) {
+    if (op == '^') return 3;
+    if (op == '*' || op == '/') return 2;
+    if (op == '+' || op == '-') return 1;
+    return 0;
+}
+
+bool isOperator(char c) {
+    return c == '+' || c == '-' || c == '*' || c == '/' || c == '^';
+}
+
+string infixToPostfix(const string &s) {
+    string res;
+    stack<char> st;
+    for (char c : s) {
+        if (isalnum((unsigned char)c)) {
+            res.push_back(c);
+        } else if (c == '(') {
+            st.push(c);
+        } else if (c == ')') {
+            while (!st.empty() && st.top() != '(') {
+                res.push_back(st.top()); st.pop();
+            }
+            if (!st.empty() && st.top() == '(') st.pop();
+        } else if (isOperator(c)) {
+            while (!st.empty() && isOperator(st.top())) {
+                char top = st.top();
+                int pTop = precedence(top);
+                int pCurr = precedence(c);
+                // '^' is right-associative: pop only if top has greater precedence
+                if ((c == '^' && pTop > pCurr) || (c != '^' && pTop >= pCurr)) {
+                    res.push_back(top); st.pop();
+                } else break;
+            }
+            st.push(c);
+        }
+        // ignore other characters (e.g., spaces)
+    }
+    while (!st.empty()) {
+        if (st.top() != '(' && st.top() != ')') res.push_back(st.top());
+        st.pop();
+    }
+    return res;
+}
+
+int main() {
+    string s;
+    if (!(cin >> s)) return 0;
+    cout << infixToPostfix(s) << '\n';
+    return 0;
+}
