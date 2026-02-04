@@ -55,5 +55,5 @@ int main() {
     if (!s.empty()) {
         isBalanced = false;
     }
-    cout << "Is the expression balanced? " << (isBalanced ? "true" : "false") << endl;
+    cout << (isBalanced ? "true" : "false") << endl;
 }
