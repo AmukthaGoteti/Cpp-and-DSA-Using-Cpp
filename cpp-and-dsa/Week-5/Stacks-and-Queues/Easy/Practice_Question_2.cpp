@@ -1,0 +1,65 @@
+/*
+    Problem Statement:
+        You are given an array of strings arr[] that represents a valid arithmetic 
+        expression written in Reverse Polish Notation (Postfix Notation). 
+        Your task is to evaluate the expression and return an integer representing its value.
+
+        Note: A postfix expression is of the form operand1 operand2 operator (e.g., "a b +"). 
+              And the division operation between two integers always computes the floor value, 
+              i.e floor(5 / 3) = 1 and floor(-5 / 3) = -2.
+              It is guaranteed that the result of the expression and all intermediate calculations 
+              will fit in a 32-bit signed integer.
+
+    Examples:
+        Input: arr[] = ["2", "3", "1", "*", "+", "9", "-"]
+        Output: -4
+        Explanation: If the expression is converted into an infix expression, it will be 2 + (3 * 1) – 9 = 5 – 9 = -4.
+
+        Input: arr[] = ["2", "3", "^", "1", "+"]
+        Output: 9
+        Explanation: If the expression is converted into an infix expression, it will be 2 ^ 3 + 1 = 8 + 1 = 9.
+*/
+
+#include <iostream>
+#include <stack>
+#include <vector>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main() {
+    vector<string> arr;
+    int n;
+    cout << "Enter number of elements in the expression: ";
+    cin >> n;
+    cout << "Enter the elements of the expression in Reverse Polish Notation:\n";
+    for (int i = 0; i < n; i++) {
+        string temp;
+        cin >> temp;
+        arr.push_back(temp);
+    }
+    stack<int> s;
+    for (const string& token : arr) {
+        if (token == "+" || token == "-" || token == "*" || token == "/" || token == "^") {
+            int operand2 = s.top(); s.pop();
+            int operand1 = s.top(); s.pop();
+            int result;
+            if (token == "+") {
+                result = operand1 + operand2;
+            } else if (token == "-") {
+                result = operand1 - operand2;
+            } else if (token == "*") {
+                result = operand1 * operand2;
+            } else if (token == "/") {
+                result = floor(static_cast<double>(operand1) / operand2);
+            } else if (token == "^") {
+                result = pow(operand1, operand2);
+            }
+            s.push(result);
+        } else {
+            s.push(stoi(token));
+        }
+    }
+    cout << s.top() << endl; // Output the final result
+    return 0;
+}
