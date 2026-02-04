@@ -68,7 +68,8 @@ string infixToPostfix(const string &s) {
                 int pCurr = precedence(c);
                 // '^' is right-associative: pop only if top has greater precedence
                 if ((c == '^' && pTop > pCurr) || (c != '^' && pTop >= pCurr)) {
-                    res.push_back(top); st.pop();
+                    res.push_back(top); 
+                    st.pop();
                 } else break;
             }
             st.push(c);
