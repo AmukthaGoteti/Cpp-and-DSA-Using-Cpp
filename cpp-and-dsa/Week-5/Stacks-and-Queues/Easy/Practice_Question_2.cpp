@@ -32,7 +32,7 @@ int main() {
     int n;
     cout << "Enter number of elements in the expression: ";
     cin >> n;
-    cout << "Enter the elements of the expression in Reverse Polish Notation:\n";
+    cout << "Enter the elements of the expression in Reverse Polish Notation: ";
     for (int i = 0; i < n; i++) {
         string temp;
         cin >> temp;
