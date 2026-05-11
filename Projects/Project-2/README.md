@@ -1,4 +1,3 @@
-````markdown
 # Parking Sensor System Simulation
 
 A simple C++ project that simulates a car parking sensor system using the concept of an ultrasonic sensor (HC-SR04) and buzzer alerts.
@@ -132,6 +131,3 @@ System Stopped Successfully.
 # Author
 
 Developed as a C++ Embedded Systems Simulation Project.
-
-```
-```
