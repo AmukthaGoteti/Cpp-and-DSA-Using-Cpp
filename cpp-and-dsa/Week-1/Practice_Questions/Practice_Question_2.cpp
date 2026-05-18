@@ -5,7 +5,7 @@
     Example :
         Input: a = 5, b = 6, c = 15
         Output: 5 15
-        Explanation: Only the value of a and c is printed as the line of code that prints b is commented. 
+        Explaination: Only the value of a and c is printed as the line of code that prints b is commented. 
 */
 #include <iostream>
 using namespace std;
