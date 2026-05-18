@@ -4,7 +4,7 @@
     Example :
         Input: Hello, World!
         Output: Hello, World!
-        Explanation: Prints Hello, World! 
+        Explaniation: Prints Hello, World! 
 */
 #include <iostream>
 using namespace std;
