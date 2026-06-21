@@ -142,6 +142,15 @@ int main() {
     cout << "Value of k: " << k << endl; // Value of k: 10
     cout << "Value of ref: " << ref << endl; // Value of ref: 10
 
+    // Function Type
+    /*
+        Functions also represent a derived type 
+        because they have a specific return type and parameter types.
+        int add(int a, int b) {
+            return a + b;
+        }
+    */
+   
     /*
         C++ is a strongly typed languange. It means that all variables' data type should be specified at the declaration,
         and it does not change throughout the program. Moreover, we can only assign the values that are of the same type as
