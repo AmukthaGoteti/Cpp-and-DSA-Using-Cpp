@@ -93,8 +93,12 @@ int main() {
 
     /*
         The void data type represents the absence of value.
-        We cannot create a variable of void type. It is used for void pointer and functions that do not return any value
+        We cannot create a variable of void type. 
+        It is used for void pointer and functions that do not return any value
         using the keyword void.
+        void display() {
+            cout << "Hello";
+        }
     */
     
     /*
