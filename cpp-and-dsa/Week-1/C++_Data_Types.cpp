@@ -132,7 +132,16 @@ int main() {
     cout << "Address of l: " << &l << endl; // Address of l: 0x7ffee3b8c9ac (example address)
     cout << "Value of ptr: " << ptr << endl; // Value of ptr: 0x7ffee3b8c9ac (example address)
     cout << "Value pointed by ptr: " << *ptr << endl; // Value pointed by ptr: 10
-    
+
+    // Reference
+    /*
+        A reference acts as an alias for an existing variable.
+    */
+    int k = 10;
+    int & ref = k;
+    cout << "Value of k: " << k << endl; // Value of k: 10
+    cout << "Value of ref: " << ref << endl; // Value of ref: 10
+
     /*
         C++ is a strongly typed languange. It means that all variables' data type should be specified at the declaration,
         and it does not change throughout the program. Moreover, we can only assign the values that are of the same type as
