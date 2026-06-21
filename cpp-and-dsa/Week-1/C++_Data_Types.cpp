@@ -100,6 +100,38 @@ int main() {
             cout << "Hello";
         }
     */
+
+    // Derieved Data Types
+    /*
+        Derived data types are formed using fundamental data types.
+        There are 4 derived data types in C++:
+            1. Array
+            2. Pointer
+            3. Reference
+            4. Function
+    */
+    // Array
+    /*
+        An array stores multiple values of the same type in 
+        contiguous memory locations.
+    */
+    int arr[5] = {1, 2, 3, 4, 5};
+    cout << arr[0] << endl;
+    for (int i = 0; i < 5; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    // Pointer
+    /*
+        A pointer stores the memory address of another variable.
+    */
+    int l = 10;
+    int* ptr = &l;
+    cout << "Value of l: " << l << endl; // Value of l: 10
+    cout << "Address of l: " << &l << endl; // Address of l: 0x7ffee3b8c9ac (example address)
+    cout << "Value of ptr: " << ptr << endl; // Value of ptr: 0x7ffee3b8c9ac (example address)
+    cout << "Value pointed by ptr: " << *ptr << endl; // Value pointed by ptr: 10
     
     /*
         C++ is a strongly typed languange. It means that all variables' data type should be specified at the declaration,
