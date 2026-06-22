@@ -203,6 +203,14 @@ int main() {
             float f;
         };
     */
+
+    // Typedef/Type Alias and Using Data Type
+    /*
+        Type aliases or Type Def provide alternative names for existing types.
+        Using data type aliases can improve code readability and maintainability.
+        typedef unsigned long ulong;
+        using ll = long long;
+    */
     /*
         C++ is a strongly typed languange. It means that all variables' data type should be specified at the declaration,
         and it does not change throughout the program. Moreover, we can only assign the values that are of the same type as
