@@ -173,7 +173,16 @@ int main() {
             int age;
         };
     */
-   
+
+    // Class Data Type
+    /*
+        A class combines data and functions into a single unit.
+        class Student {
+            public:
+                string name;
+                int age;
+        };
+    */
     /*
         C++ is a strongly typed languange. It means that all variables' data type should be specified at the declaration,
         and it does not change throughout the program. Moreover, we can only assign the values that are of the same type as
