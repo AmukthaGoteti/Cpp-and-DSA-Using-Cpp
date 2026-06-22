@@ -142,6 +142,20 @@ int main() {
     cout << "Value of k: " << k << endl; // Value of k: 10
     cout << "Value of ref: " << ref << endl; // Value of ref: 10
 
+    /*
+        | Feature               | Reference (`&`)                                         | Pointer (`*`)                                         |
+        | --------------------- | ------------------------------------------------------- | ----------------------------------------------------- |
+        | Stores                | An alias (another name) for an existing variable        | Memory address of a variable                          |
+        | Declaration           | `int &ref = x;`                                         | `int *ptr = &x;`                                      |
+        | Initialization        | Must be initialized when declared                       | Can be uninitialized, `nullptr`, or assigned later    |
+        | Can be null?          | No                                                      | Yes (`nullptr`)                                       |
+        | Can be reassigned?    | No, once bound to a variable it cannot refer to another | Yes, can point to different variables                 |
+        | Dereferencing         | Automatic                                               | Requires `*` operator                                 |
+        | Memory address access | Uses the original variable's address                    | Stores its own address value                          |
+        | Arithmetic            | Not allowed                                             | Pointer arithmetic is allowed                         |
+        | Usage                 | Function parameters, aliases                            | Dynamic memory, arrays, linked lists, data structures |
+    */
+
     // Function Type
     /*
         Functions also represent a derived type 
