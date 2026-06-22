@@ -164,6 +164,15 @@ int main() {
             return a + b;
         }
     */
+
+    // Structure Data Type
+    /*
+        A structure groups related variables under one name.
+        struct Student {
+            string name;
+            int age;
+        };
+    */
    
     /*
         C++ is a strongly typed languange. It means that all variables' data type should be specified at the declaration,
