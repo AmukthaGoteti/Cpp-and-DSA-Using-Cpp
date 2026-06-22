@@ -183,6 +183,17 @@ int main() {
                 int age;
         };
     */
+
+    /*
+        | Feature                            | struct   | class     |
+        | ---------------------------------- | -------- | --------- |
+        | Default member access              | public   | private   |
+        | Default inheritance                | public   | private   |
+        | Constructors, destructors, methods | Yes      | Yes       |
+        | Encapsulation                      | Yes      | Yes       |
+        | Inheritance                        | Yes      | Yes       |
+        | Polymorphism                       | Yes      | Yes       |
+    */
     /*
         C++ is a strongly typed languange. It means that all variables' data type should be specified at the declaration,
         and it does not change throughout the program. Moreover, we can only assign the values that are of the same type as
