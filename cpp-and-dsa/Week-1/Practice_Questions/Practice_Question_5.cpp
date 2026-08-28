@@ -26,8 +26,7 @@ int main() {
     if((typeid(a) == typeid(int)) and 
     (typeid(b) == typeid(float)) and 
     (typeid(c) == typeid(double)) and 
-    (typeid(d) == typeid(long long))) 
-    {
+    (typeid(d) == typeid(long long))) {
         cout << "Verified\n";
     }
 }
