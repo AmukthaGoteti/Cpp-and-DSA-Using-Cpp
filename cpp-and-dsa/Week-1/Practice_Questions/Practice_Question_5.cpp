@@ -23,7 +23,11 @@ int main() {
     double c;
     long long d;
     // Variables declaration checking
-    if((typeid(a) == typeid(int)) and (typeid(b) == typeid(float)) and (typeid(c) == typeid(double)) and (typeid(d) == typeid(long long))) {
+    if((typeid(a) == typeid(int)) and 
+    (typeid(b) == typeid(float)) and 
+    (typeid(c) == typeid(double)) and 
+    (typeid(d) == typeid(long long))) 
+    {
         cout << "Verified\n";
     }
 }
